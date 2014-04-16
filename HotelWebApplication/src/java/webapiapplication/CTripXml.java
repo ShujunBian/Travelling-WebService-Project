@@ -223,6 +223,7 @@ public class CTripXml {
                     Award.setAttribute("Provider", "CtripStarRate");
                 }
                 Award.setAttribute("Rating", String.valueOf(rating));
+                Criterion.appendChild(Award);
             }
 
             return removeXMLHeader(xmldoc);
@@ -373,7 +374,7 @@ public class CTripXml {
 
             DocumentBuilder db = factory.newDocumentBuilder();
 //            Document xmldoc = db.parse(new File("/Users/bianshujun/NetBeansProjects/WebAPIApplication/src/com/ctrip/openapi/java/base/RequestSOAPTemplate.xml"));
-            Document xmldoc = db.parse(new File("/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/com/staticInfo/CTripCityCode.xml"));
+            Document xmldoc = db.parse(new File("/Users/bianshujun/Downloads/Projects/Travelling-WebService-Project/HotelWebApplication/src/java/com/staticInfo/CTripCityCode.xml"));
 
             root = xmldoc.getDocumentElement();
 
@@ -396,7 +397,7 @@ public class CTripXml {
             factory.setIgnoringElementContentWhitespace(true);
 
             DocumentBuilder db = factory.newDocumentBuilder();
-            Document xmldoc = db.parse(new File("/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/com/staticInfo/CTripRegion.xml"));
+            Document xmldoc = db.parse(new File("/Users/bianshujun/Downloads/Projects/Travelling-WebService-Project/HotelWebApplication/src/java/com/staticInfo/CTripRegion.xml"));
 
             root = xmldoc.getDocumentElement();
 

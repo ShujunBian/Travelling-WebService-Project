@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TravelNetClient.h"
 #import "SearchResultViewController.h"
+#import "PostionSearchViewController.h"
 #import "Hotel.h"
 #import "NSString+Encrypt.h"
 #import "NSNotificationCenter+Addition.h"
@@ -49,9 +50,9 @@
             NSLog(@"Failed!");
         }
         else {
+            [_hotelsArray removeAllObjects];
             if ([responseData isKindOfClass:[NSArray class]]) {
                 for (NSDictionary * hotelDict in responseData) {
-                    NSLog(@"%@",hotelDict);
                     [_hotelsArray addObject:[self getHotelByDicitionary:hotelDict]];
                 }
                 [self.mainViewDelegate didFectchHotelDataWithArray:_hotelsArray];
@@ -87,8 +88,9 @@
     else
         rating = -1;
     
+    BOOL isSpecailHotel = [hotelName isEqualToString:@"-1"] ? NO : YES;
     [client searchHotelWith:cityName areaID:regionName
-                  hotelName:hotelName isHotelStarRate:YES rating:rating isSpecailHotel:NO
+                  hotelName:hotelName isHotelStarRate:YES rating:rating isSpecailHotel:isSpecailHotel
          succededCompletion:handleData failedCompletion:nil];
     
     [self performSegueWithIdentifier:@"search" sender:sender];
@@ -139,5 +141,9 @@
         SearchResultViewController * searchView = (SearchResultViewController *)segue.destinationViewController;
         self.mainViewDelegate = searchView;
     }
+//    if ([segue.identifier isEqualToString:@"positionSearch"]) {
+//        PostionSearchViewController * searchView = (PostionSearchViewController *)segue.destinationViewController;
+//        [searchView montiorLocation];
+//    }
 }
 @end

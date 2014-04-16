@@ -12,4 +12,5 @@
 
 - (NSString *)md5;
 - (NSString *)replaceUTF8;
+- (NSString *)addUTF8;
 @end

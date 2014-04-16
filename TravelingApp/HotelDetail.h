@@ -10,6 +10,7 @@
 
 @interface HotelDetail : NSObject
 
+@property (nonatomic, strong) NSString * hotelName;
 @property (nonatomic, strong) NSString * hotelId;
 @property (nonatomic, strong) NSString * hotelDecrpition;
 @property (nonatomic) int hotelApiType;

@@ -42,10 +42,10 @@ static TravelNetClient *sharedClient;
 {
     NSString *path;
     if (isSpecailHotel) {
-        path = [[NSString stringWithFormat:@"getHotel/All/%@/%@/%@/%d/-1/1",hotelCityCode,areaName,hotelName,rating] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        path = [[NSString stringWithFormat:@"getHotel/All/%@/%@/%@/%d/-1/1",hotelCityCode,areaName,hotelName,rating] addUTF8];
     }
     else
-        path = [[NSString stringWithFormat:@"getHotel/All/%@/%@/%@/%d/-1/-1",hotelCityCode,areaName,hotelName,rating] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        path = [[NSString stringWithFormat:@"getHotel/All/%@/%@/%@/%d/-1/-1",hotelCityCode,areaName,hotelName,rating] addUTF8];
     
     [self getPath:path suceededCompletion:succededCompletion failedCompletion:failedCompletion];
 }
@@ -58,22 +58,22 @@ static TravelNetClient *sharedClient;
     switch (apiType) {
         case 0:
         {
-            path = [[NSString stringWithFormat:@"getHotelInfo/CTrip/%@",hotelID] replaceUTF8];
+            path = [[NSString stringWithFormat:@"getHotelInfo/CTrip/%@",hotelID] addUTF8];
             break;
         }
         case 1:
         {
-            path = [[NSString stringWithFormat:@"getHotelInfo/Hotwire/%@",hotelID] replaceUTF8];
+            path = [[NSString stringWithFormat:@"getHotelInfo/Hotwire/%@",hotelID] addUTF8];
             break;
         }
         case 2:
         {
-            path = [[NSString stringWithFormat:@"getHotelInfo/DZDP/%@",hotelID] replaceUTF8];
+            path = [[NSString stringWithFormat:@"getHotelInfo/DZDP/%@",hotelID] addUTF8];
             break;
         }
         case 3:
         {
-            path = [[NSString stringWithFormat:@"getHotelInfo/TC/%@",hotelID] replaceUTF8];
+            path = [[NSString stringWithFormat:@"getHotelInfo/TC/%@",hotelID] addUTF8];
             break;
         }
         default:
@@ -82,6 +82,16 @@ static TravelNetClient *sharedClient;
     [self getPath:path suceededCompletion:succededCompletion failedCompletion:failedCompletion];
 }
 
+- (void)searchHotelWithhotelName:(NSString *)hotelName
+                        latitude:(NSString *)latitude
+                      longtitude:(NSString *)longtitude
+              succededCompletion:(void (^)(BOOL succeeded, id responseData))succededCompletion
+                failedCompletion:(void (^) (void))failedCompletion
+{
+    NSString * path = [NSString stringWithFormat:@"getHotel/DZDP/-1/%@/%@/酒店/-1/%@/5000/1",latitude,longtitude,hotelName];
+    path = [path addUTF8];
+    [self getPath:path suceededCompletion:succededCompletion failedCompletion:failedCompletion];
+}
 
 #pragma mark - Basic Methods
 - (void)getPath:(NSString *)path
@@ -146,6 +156,11 @@ failedCompletion:(void(^)(void))failedCompletion
     self.responseData = (NSString *)responseData;
     JSONDecoder *decoder = [JSONDecoder decoder];
     self.responseData = [decoder objectWithData:responseData];
+    if ([self.responseData isKindOfClass:[NSDictionary class]]) {
+        if (completion) {
+            completion(YES, self.responseData);
+        }
+    }
     if ([self.responseData isKindOfClass:[NSArray class]]) {
         if (completion) {
             completion(YES, self.responseData);

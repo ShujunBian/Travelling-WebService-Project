@@ -66,9 +66,14 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - MainViewDelegate
 - (void)didFectchHotelDataWithArray:(NSMutableArray *)hotelsArray
 {
+    [self.hotelsArray removeAllObjects];
     self.hotelsArray = hotelsArray;
     [self.tableView reloadData];
 }
@@ -79,6 +84,7 @@
         SearchResultTableViewCell *cell = (SearchResultTableViewCell *)sender;
         HotelDetailViewController * detailViewController = (HotelDetailViewController *)[segue destinationViewController];
         Hotel * tempHotel = cell.hotel;
+        detailViewController.hotelDetail = [[HotelDetail alloc]init];
         [detailViewController.hotelDetail setHotelApiType:tempHotel.searchingType];
         switch (tempHotel.searchingType) {
             case 0: {

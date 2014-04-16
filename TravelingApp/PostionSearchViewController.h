@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PostionSearchViewController : UIViewController
+@interface PostionSearchViewController : UIViewController<CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *ratingTextField;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -16,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) CLLocationManager* locationManager;
+
+- (void)montiorLocation;
 @end

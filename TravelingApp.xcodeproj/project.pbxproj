@@ -39,6 +39,8 @@
 		5172C4A118F685A500C841BB /* HotelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5172C4A018F685A500C841BB /* HotelDetailViewController.m */; };
 		519D0AB218FC3A5A00DDE7C8 /* NSNotificationCenter+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 519D0AB118FC3A5A00DDE7C8 /* NSNotificationCenter+Addition.m */; };
 		519D0AB518FC42E900DDE7C8 /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 519D0AB418FC42E900DDE7C8 /* SearchResultTableViewCell.m */; };
+		51BFF9D818FE280700213BE3 /* UIImageView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BFF9D718FE280700213BE3 /* UIImageView+Addition.m */; };
+		51BFF9DB18FE660300213BE3 /* PositionSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BFF9DA18FE660300213BE3 /* PositionSearchTableViewCell.m */; };
 		51DAEDE218FE184700BF5402 /* HotelDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DAEDE118FE184700BF5402 /* HotelDetail.m */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,10 @@
 		519D0AB118FC3A5A00DDE7C8 /* NSNotificationCenter+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+Addition.m"; sourceTree = "<group>"; };
 		519D0AB318FC42E900DDE7C8 /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
 		519D0AB418FC42E900DDE7C8 /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		51BFF9D618FE280700213BE3 /* UIImageView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Addition.h"; sourceTree = "<group>"; };
+		51BFF9D718FE280700213BE3 /* UIImageView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Addition.m"; sourceTree = "<group>"; };
+		51BFF9D918FE660300213BE3 /* PositionSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionSearchTableViewCell.h; sourceTree = "<group>"; };
+		51BFF9DA18FE660300213BE3 /* PositionSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionSearchTableViewCell.m; sourceTree = "<group>"; };
 		51DAEDE018FE184700BF5402 /* HotelDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelDetail.h; sourceTree = "<group>"; };
 		51DAEDE118FE184700BF5402 /* HotelDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +191,8 @@
 				510C652518F4D271007B261D /* SearchResultViewController.m */,
 				519D0AB318FC42E900DDE7C8 /* SearchResultTableViewCell.h */,
 				519D0AB418FC42E900DDE7C8 /* SearchResultTableViewCell.m */,
+				51BFF9D918FE660300213BE3 /* PositionSearchTableViewCell.h */,
+				51BFF9DA18FE660300213BE3 /* PositionSearchTableViewCell.m */,
 				5172C49F18F685A500C841BB /* HotelDetailViewController.h */,
 				5172C4A018F685A500C841BB /* HotelDetailViewController.m */,
 				510C650418F4CDD3007B261D /* Images.xcassets */,
@@ -273,6 +281,8 @@
 		513F761718FC073E00FE2FA3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				51BFF9D618FE280700213BE3 /* UIImageView+Addition.h */,
+				51BFF9D718FE280700213BE3 /* UIImageView+Addition.m */,
 				519D0AB018FC3A5A00DDE7C8 /* NSNotificationCenter+Addition.h */,
 				519D0AB118FC3A5A00DDE7C8 /* NSNotificationCenter+Addition.m */,
 				510C654A18F4D497007B261D /* NSString+Encrypt.h */,
@@ -392,6 +402,7 @@
 				510C654118F4D3BE007B261D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				510C64FD18F4CDD3007B261D /* AppDelegate.m in Sources */,
 				510C654018F4D3BE007B261D /* AFJSONRequestOperation.m in Sources */,
+				51BFF9D818FE280700213BE3 /* UIImageView+Addition.m in Sources */,
 				510C64F918F4CDD3007B261D /* main.m in Sources */,
 				510C654218F4D3BE007B261D /* AFPropertyListRequestOperation.m in Sources */,
 				510C653D18F4D3BE007B261D /* AFHTTPClient.m in Sources */,
@@ -399,6 +410,7 @@
 				510C654C18F4D497007B261D /* NSString+Encrypt.m in Sources */,
 				510C653E18F4D3BE007B261D /* AFHTTPRequestOperation.m in Sources */,
 				510C654918F4D407007B261D /* TravelNetClient.m in Sources */,
+				51BFF9DB18FE660300213BE3 /* PositionSearchTableViewCell.m in Sources */,
 				51DAEDE218FE184700BF5402 /* HotelDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

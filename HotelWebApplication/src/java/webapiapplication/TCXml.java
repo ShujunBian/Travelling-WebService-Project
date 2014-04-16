@@ -268,7 +268,7 @@ public class TCXml {
 
 //        StringBuilder resultStringBuilder = new StringBuilder();
         int getItemCounter;
-        if (!tcHotelName.equals("")) {
+        if (!tcHotelName.equals("-1")) {
             if (node.hasChildNodes()) {
                 getItemCounter = node.getChildNodes().getLength();
             } else {
@@ -310,7 +310,7 @@ public class TCXml {
             factory.setIgnoringElementContentWhitespace(true);
 
             DocumentBuilder db = factory.newDocumentBuilder();
-            Document xmldoc = db.parse(new File("/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/com/staticInfo/TCCityCode.xml"));
+            Document xmldoc = db.parse(new File("/Users/bianshujun/Downloads/Projects/Travelling-WebService-Project/HotelWebApplication/src/java/com/staticInfo/TCCityCode.xml"));
 
             root = xmldoc.getDocumentElement();
 

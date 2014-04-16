@@ -30,4 +30,8 @@
     return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
+- (NSString *)addUTF8
+{
+     return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
 @end

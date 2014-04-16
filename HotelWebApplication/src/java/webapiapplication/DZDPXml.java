@@ -179,7 +179,7 @@ public class DZDPXml {
             factory.setIgnoringElementContentWhitespace(true);
 
             DocumentBuilder db = factory.newDocumentBuilder();
-            Document xmldoc = db.parse(new File("/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/com/staticInfo/DZDPRegion.xml"));
+            Document xmldoc = db.parse(new File("/Users/bianshujun/Downloads/Projects/Travelling-WebService-Project/HotelWebApplication/src/java/com/staticInfo/DZDPRegion.xml"));
 
             root = xmldoc.getDocumentElement();
 

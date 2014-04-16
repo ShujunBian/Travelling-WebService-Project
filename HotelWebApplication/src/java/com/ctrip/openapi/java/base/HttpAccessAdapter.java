@@ -16,13 +16,13 @@ import com.ctrip.openapi.java.utils.ConfigData;
 import com.ctrip.openapi.java.utils.SignatureUtils;
 import java.io.ByteArrayOutputStream;
 
-// Http·ÃÎÊÆ÷
+// Httpè®¿é—®å™¨
 public class HttpAccessAdapter {
-    // HttpÇëÇó¾²Ì¬ĞÅÏ¢
+    // Httpè¯·æ±‚é™æ€ä¿¡æ¯
 
     private static ArrayList<HttpRequestProperty> StaticHttpRequestProperty = LoadStaticHttpRequestProperties();
 
-    // ·¢ËÍÖ¸¶¨µÄÇëÇóµ½Ö¸¶¨µÄURLÉÏ
+    // å‘é€æŒ‡å®šçš„è¯·æ±‚åˆ°æŒ‡å®šçš„URLä¸Š
     public static String SendRequestToUrl(String requestContent,
             String urlString, String paraName) {
         InputStream errorStream = null;
@@ -110,7 +110,7 @@ public class HttpAccessAdapter {
         return "";
     }
 
-    // ½«SoapÍâ¿ÇÌí¼Óµ½ÇëÇóÌåÉÏ
+    // å°†Soapå¤–å£³æ·»åŠ åˆ°è¯·æ±‚ä½“ä¸Š
     private static String AddSoapShell(
             /* String parameterName, */String patameterValue) throws Exception {
         BufferedReader bufferedReader = null;
@@ -129,9 +129,9 @@ public class HttpAccessAdapter {
             String result = soapShellStringBuilder.toString();
             return result.replaceAll("string", patameterValue);
         } catch (FileNotFoundException e) {
-            throw new SdkSystemException("ÎŞ·¨ÕÒµ½ÇëÇóÄ£°åÎÄ¼ş");
+            throw new SdkSystemException("æ— æ³•æ‰¾åˆ°è¯·æ±‚æ¨¡æ¿æ–‡ä»¶");
         } catch (IOException e) {
-            throw new SdkSystemException("ÎŞ·¨¶ÁÈ¡ÇëÇóÄ£°åÎÄ¼ş");
+            throw new SdkSystemException("æ— æ³•è¯»å–è¯·æ±‚æ¨¡æ¿æ–‡ä»¶");
         } finally {
             if (bufferedReader != null) {
                 try {
@@ -142,7 +142,7 @@ public class HttpAccessAdapter {
         }
     }
 
-    // É¾³ıSoapÍâ¿ÇĞÅÏ¢
+    // åˆ é™¤Soapå¤–å£³ä¿¡æ¯
     private static String RemoveSoapShell(String source) {
         String result = "";
         int indexElementBegin = source.indexOf("<RequestResult>");
@@ -154,21 +154,21 @@ public class HttpAccessAdapter {
         return result;
     }
 
-    // ½«xmlÎÄµµ×ª»»Îª¿É´«ÊäµÄ×Ö·û´®
+    // å°†xmlæ–‡æ¡£è½¬æ¢ä¸ºå¯ä¼ è¾“çš„å­—ç¬¦ä¸²
     private static String XMLToString(String source) {
         String result = source.replaceAll("<", "&lt;");
         result = result.replaceAll(">", "&gt;");
         return result;
     }
 
-    // ½«·µ»ØµÄ×Ö·û´®×ª»»Îª¿É·´ĞòÁĞ»¯XMLÎÄ±¾
+    // å°†è¿”å›çš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºå¯ååºåˆ—åŒ–XMLæ–‡æœ¬
     private static String StringToXML(String source) {
         String result = source.replaceAll("&lt;", "<");
         result = result.replaceAll("&gt;", ">");
         return result;
     }
 
-    // ¼ÓÔØ¾²Ì¬ĞÅÏ¢
+    // åŠ è½½é™æ€ä¿¡æ¯
     private static ArrayList<HttpRequestProperty> LoadStaticHttpRequestProperties() {
         ArrayList<HttpRequestProperty> staticHttpRequestProperty = new ArrayList<HttpRequestProperty>();
         staticHttpRequestProperty.add(new HttpRequestProperty("Host",
@@ -205,7 +205,7 @@ public class HttpAccessAdapter {
                     + "<RequestBody xmlns:ns=\"http://www.opentravel.org/OTA/2003/05\" "
                     + "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
                     + "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">"
-                    + "<ns:OTA_PingRQ><ns:EchoData>ÁªÍ¨²âÊÔ</ns:EchoData></ns:OTA_PingRQ></RequestBody></HotelRequest></Request>");
+                    + "<ns:OTA_PingRQ><ns:EchoData>è”é€šæµ‹è¯•</ns:EchoData></ns:OTA_PingRQ></RequestBody></HotelRequest></Request>");
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
@@ -213,19 +213,19 @@ public class HttpAccessAdapter {
     }
 
     /**
-     * ¾Æµê²éÑ¯
+     * é…’åº—æŸ¥è¯¢
      *
-     * @param hotelCityCode ³ÇÊĞID
-     * @param AreaID ĞĞÕşÇøID
-     * @param hotelName ¾ÆµêÃû³Æ
-     * @param isHotelStarRate Ñ¡Ôñ¾ÆµêÆÀ¼¶±ê×¼,trueÎªĞÇ¼¶,falseÎªĞ¯³ÌĞÇ¼¶,
-     * @param rating ĞÇ¼¶µÈ¼¶
+     * @param hotelCityCode åŸå¸‚ID
+     * @param AreaID è¡Œæ”¿åŒºID
+     * @param hotelName é…’åº—åç§°
+     * @param isHotelStarRate é€‰æ‹©é…’åº—è¯„çº§æ ‡å‡†,trueä¸ºæ˜Ÿçº§,falseä¸ºæºç¨‹æ˜Ÿçº§,
+     * @param rating æ˜Ÿçº§ç­‰çº§
      * @return
      */
     public static String createHotelRequestXml(int hotelCityCode, int AreaID, String hotelName,
             boolean isHotelStarRate, int rating) {
         StringBuilder sb = new StringBuilder();
-        try {       
+        try {
             sb.append("<Request><Header AllianceID=\"");
             sb.append(ConfigData.AllianceId);
             sb.append("\" SID=\"");

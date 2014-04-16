@@ -29,4 +29,11 @@
                       APIType:(int)apiType
            succededCompletion:(void (^)(BOOL succeeded, id responseData))succededCompletion
              failedCompletion:(void (^) (void))failedCompletion;
+
+- (void)searchHotelWithhotelName:(NSString *)hotelName
+                       latitude:(NSString *)latitude
+                     longtitude:(NSString *)longtitude
+             succededCompletion:(void (^)(BOOL succeeded, id responseData))succededCompletion
+               failedCompletion:(void (^) (void))failedCompletion;
+
 @end
