@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/web/WEB-INF/web.xml</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/HttpHelper.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/CTripXml.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/controller/SearchHotelController.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/TCXml.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/com/staticInfo/TCCityCode.xml</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/DZDPXml.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/controller/HotelController.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/StaticHelper.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/service/PersonServiceImpl.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/domain/Person.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/controller/PersonController.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/webapiapplication/HotwireXml.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/domain/Hotel.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/controller/SearchHotelInfoController.java</file>
-        <file>file:/Users/bianshujun/NetBeansProjects/HotelWebApplication/src/java/cn/edu/tongji/cdi/soul/domain/HotelDetailInfo.java</file>
-    </open-files>
 </project-private>
