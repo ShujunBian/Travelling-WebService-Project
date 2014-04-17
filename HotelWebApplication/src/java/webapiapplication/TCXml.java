@@ -285,7 +285,6 @@ public class TCXml {
             if (node.getChildNodes().item(i) instanceof Element) {
                 Element hotelElement = (Element) node.getChildNodes().item(i);
                 String hotelName = hotelElement.getElementsByTagName("hotelName").item(0).getTextContent();
-                if (hotelName.contains(tcHotelName)) {
                     String hotelId = hotelElement.getElementsByTagName("hotelId").item(0).getTextContent();
                     String hotelAddress = hotelElement.getElementsByTagName("address").item(0).getTextContent();
                     String hotelCityName = hotelElement.getElementsByTagName("city").item(0).getChildNodes().item(1).getTextContent();
@@ -296,7 +295,7 @@ public class TCXml {
                     resultList.add(tempHotel);
 //                    resultStringBuilder.append("").append(hotelName);
 //                    resultStringBuilder.append("\n");
-                }
+                
             }
         }
         return resultList;

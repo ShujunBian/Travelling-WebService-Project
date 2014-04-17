@@ -86,7 +86,7 @@ public class SearchHotelController {
 
         String result = HttpHelper.readContentFromGet(url);
         ArrayList<Hotel> DZDPList = DZDPXml.dealWithSearchHotelXml(StaticHelper.getDocumentByString(result));
-        
+
 //        response.setContentType("text/xml;charset=utf-8");
 //        response.getWriter().write(result);
 
@@ -109,7 +109,7 @@ public class SearchHotelController {
 
     @RequestMapping(value = "All/{cityName}/{AreaName}/{hotelName}/{rating}/{keyword}/{isSpecialHotel}", method = RequestMethod.GET)
     @ResponseBody
-    public String All(@PathVariable String cityName, @PathVariable String AreaName, @PathVariable String hotelName,
+    public ArrayList All(@PathVariable String cityName, @PathVariable String AreaName, @PathVariable String hotelName,
             @PathVariable int rating, @PathVariable String keyword, @PathVariable String isSpecialHotel,
             HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -144,7 +144,6 @@ public class SearchHotelController {
             for (int i = 0; i < CTripList.size(); i++) {
                 responseList.add(CTripList.get(i));
             }
-            response.getWriter().write(cTripHotelResponse);
 
         } catch (ParserConfigurationException ex) {
             Logger.getLogger(SearchHotelController.class.getName()).log(Level.SEVERE, null, ex);
@@ -171,36 +170,42 @@ public class SearchHotelController {
 //        resultString.append("\n").append(dzdpResult);
 
             //ͬ同程
-            Date date = new Date();
-            Calendar calendar = new GregorianCalendar();
-            calendar.setTime(date);
-            calendar.add(Calendar.DATE, 1);
-            date = calendar.getTime();
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-            String nextDateString = formatter.format(date);
+            if ("-1".equals(hotelName)) {
+                Date date = new Date();
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(date);
+                calendar.add(Calendar.DATE, 1);
+                date = calendar.getTime();
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                String nextDateString = formatter.format(date);
 
-            calendar.add(Calendar.DATE, -1);
-            date = calendar.getTime();
-            String currentDateString = formatter.format(date);
+                calendar.add(Calendar.DATE, -1);
+                date = calendar.getTime();
+                String currentDateString = formatter.format(date);
 
-            String tcCityId = TCXml.getCTripCityCode(chineseCityName);
-            String currentTime = new java.sql.Timestamp(System.currentTimeMillis()).toString();
-            String digitalSign = TongChengDigitalSign.getContent(currentTime, "GetHotelList");
-            String postContent = TCXml.getTCXMLDoc("GetHotelList", digitalSign, currentTime, tcCityId,
-                    currentDateString, nextDateString, String.valueOf(rating));
-            String specialHotelName;
-            if ("1".equals(isSpecialHotel)) {
-                specialHotelName = hotelName;
-            } else {
-                specialHotelName = "-1";
-            }
-            ArrayList<Hotel> TCList = TCXml.dealWithSearchHotelXml(StaticHelper.getDocumentByString(
-                    HttpHelper.readContentFromPost("http://tcopenapitest.17usoft.com/handlers/hotel/QueryHandler.ashx", postContent)), specialHotelName);
-            for (int i = 0; i < TCList.size(); i++) {
-                responseList.add(TCList.get(i));
+                String tcCityId = TCXml.getCTripCityCode(chineseCityName);
+                String currentTime = new java.sql.Timestamp(System.currentTimeMillis()).toString();
+                String digitalSign = TongChengDigitalSign.getContent(currentTime, "GetHotelList");
+                String postContent = TCXml.getTCXMLDoc("GetHotelList", digitalSign, currentTime, tcCityId,
+                        currentDateString, nextDateString, String.valueOf(rating));
+                String specialHotelName;
+                if ("1".equals(isSpecialHotel)) {
+                    specialHotelName = hotelName;
+                } else {
+                    specialHotelName = "-1";
+                }
+                ArrayList<Hotel> TCList = TCXml.dealWithSearchHotelXml(StaticHelper.getDocumentByString(
+                        HttpHelper.readContentFromPost("http://tcopenapitest.17usoft.com/handlers/hotel/QueryHandler.ashx", postContent)),
+                        specialHotelName);
+//            response.getWriter().write(
+//                    HttpHelper.readContentFromPost("http://tcopenapitest.17usoft.com/handlers/hotel/QueryHandler.ashx", postContent));
+                for (int i = 0; i < TCList.size(); i++) {
+                    responseList.add(TCList.get(i));
+                }
             }
         }
-        return null;
+//        return null;
+        return responseList;
 
     }
 }

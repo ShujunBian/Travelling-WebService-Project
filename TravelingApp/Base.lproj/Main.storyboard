@@ -24,38 +24,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="城市" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsZ-pa-Q0X">
-                                <rect key="frame" x="38" y="100" width="122" height="30"/>
+                                <rect key="frame" x="38" y="116" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dEd-Nk-frO"/>
-                                    <constraint firstAttribute="width" constant="122" id="vh4-hc-tED"/>
+                                    <constraint firstAttribute="height" constant="30" id="6YP-Av-Hhc"/>
+                                    <constraint firstAttribute="width" constant="122" id="uJY-si-4Oe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="酒店名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-aY-la7">
-                                <rect key="frame" x="38" y="201" width="122" height="30"/>
+                                <rect key="frame" x="38" y="269" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="YYX-wr-yqo"/>
+                                    <constraint firstAttribute="height" constant="30" id="vdx-9k-0ni"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="星级" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66J-uz-W9k">
-                                <rect key="frame" x="38" y="254" width="122" height="30"/>
+                                <rect key="frame" x="38" y="338" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XVN-Ml-w8Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="关键字" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-pZ-2uV">
-                                <rect key="frame" x="38" y="308" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="S8g-0r-LgU"/>
+                                    <constraint firstAttribute="height" constant="30" id="UIK-Kw-cKM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -64,8 +55,8 @@
                                 <rect key="frame" x="132" y="426" width="57" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="LF6-e8-Kuf"/>
-                                    <constraint firstAttribute="height" constant="41" id="Oqo-UY-amv"/>
+                                    <constraint firstAttribute="height" constant="41" id="JuF-Aw-Mi0"/>
+                                    <constraint firstAttribute="width" constant="57" id="nmc-Da-qWx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="查找！">
@@ -76,19 +67,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="行政区" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ly6-8F-ydw">
-                                <rect key="frame" x="38" y="150" width="122" height="30"/>
+                                <rect key="frame" x="38" y="190" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="09a-ql-R0s"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="找几家？" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-m4-EhX">
-                                <rect key="frame" x="38" y="368" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sNd-B1-u5V"/>
+                                    <constraint firstAttribute="height" constant="30" id="3Q3-on-d8e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -96,9 +78,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfN-bB-nUd">
                                 <rect key="frame" x="48" y="475" width="225" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="kC0-ZE-KEB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="或者根据位置模糊查找？">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,40 +89,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cfN-bB-nUd" firstAttribute="top" secondItem="KYJ-AO-0bK" secondAttribute="bottom" constant="8" symbolic="YES" id="0q3-XW-VSI"/>
-                            <constraint firstItem="Ly6-8F-ydw" firstAttribute="leading" secondItem="KsZ-pa-Q0X" secondAttribute="leading" id="0w9-bK-kGE"/>
-                            <constraint firstItem="KYJ-AO-0bK" firstAttribute="top" secondItem="fxK-m4-EhX" secondAttribute="bottom" constant="28" id="8mH-TQ-Ghp"/>
-                            <constraint firstItem="66J-uz-W9k" firstAttribute="top" secondItem="nsE-aY-la7" secondAttribute="bottom" constant="23" id="9bv-co-dlI"/>
-                            <constraint firstItem="6SC-xs-Qqf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="FSn-up-ocB"/>
-                            <constraint firstItem="66J-uz-W9k" firstAttribute="leading" secondItem="nsE-aY-la7" secondAttribute="leading" id="IId-im-4eI"/>
-                            <constraint firstItem="fxK-m4-EhX" firstAttribute="top" secondItem="Bdj-pZ-2uV" secondAttribute="bottom" constant="30" id="OK9-Me-dtO"/>
-                            <constraint firstItem="Bdj-pZ-2uV" firstAttribute="leading" secondItem="66J-uz-W9k" secondAttribute="leading" id="SOB-9A-Fr3"/>
-                            <constraint firstItem="cfN-bB-nUd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="48" id="Tqs-xR-5WP"/>
-                            <constraint firstItem="Ly6-8F-ydw" firstAttribute="leading" secondItem="nsE-aY-la7" secondAttribute="leading" id="WUd-KB-eUA"/>
-                            <constraint firstItem="nsE-aY-la7" firstAttribute="top" secondItem="Ly6-8F-ydw" secondAttribute="bottom" constant="21" id="YyF-3d-dhU"/>
-                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="leading" secondItem="6SC-xs-Qqf" secondAttribute="leading" id="ZLu-Qw-RFg"/>
-                            <constraint firstItem="6SC-xs-Qqf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bXd-g0-8W2"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cfN-bB-nUd" secondAttribute="bottom" constant="49" id="bbK-BK-w07"/>
-                            <constraint firstItem="66J-uz-W9k" firstAttribute="trailing" secondItem="nsE-aY-la7" secondAttribute="trailing" id="dWs-Cd-xST"/>
-                            <constraint firstItem="Bdj-pZ-2uV" firstAttribute="trailing" secondItem="66J-uz-W9k" secondAttribute="trailing" id="eEO-KR-Dg2"/>
-                            <constraint firstItem="Ly6-8F-ydw" firstAttribute="top" secondItem="KsZ-pa-Q0X" secondAttribute="bottom" constant="20" id="eeP-XI-oh5"/>
-                            <constraint firstItem="KYJ-AO-0bK" firstAttribute="centerX" secondItem="6SC-xs-Qqf" secondAttribute="centerX" id="fvh-xl-agL"/>
-                            <constraint firstItem="Ly6-8F-ydw" firstAttribute="trailing" secondItem="nsE-aY-la7" secondAttribute="trailing" id="m4F-GX-V6z"/>
-                            <constraint firstItem="6SC-xs-Qqf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="38" id="nzK-Ib-htj"/>
-                            <constraint firstItem="fxK-m4-EhX" firstAttribute="leading" secondItem="Bdj-pZ-2uV" secondAttribute="leading" id="oJG-Zg-tQb"/>
-                            <constraint firstItem="cfN-bB-nUd" firstAttribute="centerX" secondItem="KYJ-AO-0bK" secondAttribute="centerX" id="peZ-Fb-TdJ"/>
-                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="trailing" secondItem="Ly6-8F-ydw" secondAttribute="trailing" id="q5d-Gj-7S1"/>
-                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="top" secondItem="6SC-xs-Qqf" secondAttribute="bottom" constant="17" id="rLu-25-6OJ"/>
-                            <constraint firstItem="Bdj-pZ-2uV" firstAttribute="top" secondItem="66J-uz-W9k" secondAttribute="bottom" constant="24" id="uMS-Cj-gmL"/>
-                            <constraint firstItem="Bdj-pZ-2uV" firstAttribute="trailing" secondItem="fxK-m4-EhX" secondAttribute="trailing" id="yFf-hK-jVZ"/>
+                            <constraint firstItem="Ly6-8F-ydw" firstAttribute="top" secondItem="KsZ-pa-Q0X" secondAttribute="bottom" constant="44" id="3M1-Hl-oGG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cfN-bB-nUd" secondAttribute="bottom" constant="49" id="3ta-MA-vD3"/>
+                            <constraint firstItem="66J-uz-W9k" firstAttribute="top" secondItem="nsE-aY-la7" secondAttribute="bottom" constant="39" id="6bC-n1-M1A"/>
+                            <constraint firstItem="cfN-bB-nUd" firstAttribute="centerX" secondItem="KYJ-AO-0bK" secondAttribute="centerX" id="C1x-Kf-Rl6"/>
+                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="top" secondItem="6SC-xs-Qqf" secondAttribute="bottom" constant="33" id="Eu6-xn-tJj"/>
+                            <constraint firstItem="nsE-aY-la7" firstAttribute="trailing" secondItem="Ly6-8F-ydw" secondAttribute="trailing" id="H97-W9-A0I"/>
+                            <constraint firstItem="cfN-bB-nUd" firstAttribute="top" secondItem="KYJ-AO-0bK" secondAttribute="bottom" constant="8" symbolic="YES" id="Lfq-AX-vbg"/>
+                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="trailing" secondItem="Ly6-8F-ydw" secondAttribute="trailing" id="Pch-ga-ytH"/>
+                            <constraint firstItem="nsE-aY-la7" firstAttribute="leading" secondItem="Ly6-8F-ydw" secondAttribute="leading" id="T9J-wF-XkR"/>
+                            <constraint firstItem="66J-uz-W9k" firstAttribute="leading" secondItem="nsE-aY-la7" secondAttribute="leading" id="WdK-iW-dnd"/>
+                            <constraint firstItem="6SC-xs-Qqf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="38" id="Wxd-mD-gr7"/>
+                            <constraint firstItem="KYJ-AO-0bK" firstAttribute="top" secondItem="66J-uz-W9k" secondAttribute="bottom" constant="58" id="Z9z-eR-btW"/>
+                            <constraint firstItem="nsE-aY-la7" firstAttribute="top" secondItem="Ly6-8F-ydw" secondAttribute="bottom" constant="49" id="bXz-XI-59c"/>
+                            <constraint firstItem="66J-uz-W9k" firstAttribute="trailing" secondItem="nsE-aY-la7" secondAttribute="trailing" id="eme-pM-c4v"/>
+                            <constraint firstItem="cfN-bB-nUd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="f7M-4B-moK"/>
+                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="leading" secondItem="Ly6-8F-ydw" secondAttribute="leading" id="gg4-Bt-MLE"/>
+                            <constraint firstItem="6SC-xs-Qqf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="jBm-Ux-6P5"/>
+                            <constraint firstItem="cfN-bB-nUd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="48" id="o0r-65-M5e"/>
+                            <constraint firstItem="KsZ-pa-Q0X" firstAttribute="leading" secondItem="6SC-xs-Qqf" secondAttribute="leading" id="vke-Eu-pZL"/>
+                            <constraint firstItem="nsE-aY-la7" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="whY-jC-JVP"/>
+                            <constraint firstItem="KYJ-AO-0bK" firstAttribute="centerX" secondItem="6SC-xs-Qqf" secondAttribute="centerX" id="yK6-oz-37x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mHA-tl-YQG"/>
                     <connections>
                         <outlet property="cityNameTextField" destination="KsZ-pa-Q0X" id="fbj-q3-yp1"/>
                         <outlet property="hotelTextField" destination="nsE-aY-la7" id="zpt-59-o49"/>
-                        <outlet property="keywordTextField" destination="Bdj-pZ-2uV" id="W2j-pn-Wb2"/>
-                        <outlet property="limitTextField" destination="fxK-m4-EhX" id="Xgc-qS-4Rm"/>
                         <outlet property="ratingTextField" destination="66J-uz-W9k" id="mRz-T0-19m"/>
                         <outlet property="regionTextField" destination="Ly6-8F-ydw" id="vGP-Dm-oUx"/>
                         <outlet property="searchButton" destination="KYJ-AO-0bK" id="A87-Ew-xAb"/>

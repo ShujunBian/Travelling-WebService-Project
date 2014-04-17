@@ -450,17 +450,17 @@ public class CTripXml {
         Element node = (Element) StaticHelper.selectSingleNode(expression, root);
         Element hotelElement = (Element) node.getChildNodes().item(0);
         String hotelName = hotelElement.getAttribute("HotelName");
-        
+
         Element urlRoot = (Element) hotelElement.getElementsByTagName("MultimediaDescriptions").item(0);
         String urlExpression = "MultimediaDescription/ImageItems/ImageItem/ImageFormat/URL";
-        Element urlNode = (Element)StaticHelper.selectSingleNode(urlExpression, urlRoot);
+        Element urlNode = (Element) StaticHelper.selectSingleNode(urlExpression, urlRoot);
         String imageURL = urlNode.getChildNodes().item(0).getTextContent();
-        
+
         Element descriptionRoot = (Element) hotelElement.getElementsByTagName("MultimediaDescriptions").item(0);
         String desExpression = "MultimediaDescription/TextItems/TextItem/Description";
-        Element desNode = (Element)StaticHelper.selectSingleNode(desExpression, descriptionRoot);
+        Element desNode = (Element) StaticHelper.selectSingleNode(desExpression, descriptionRoot);
         String textDescription = desNode.getChildNodes().item(0).getTextContent();
-        
+
 //        String imageURL = descripition.getElementsByTagName("URL").item(0).getTextContent();
 //        String textDescription = descripition.getElementsByTagName("Description").item(0).getTextContent();
 

@@ -66,7 +66,7 @@ public class SearchHotelInfoController {
 
         String result = TCXml.tongchengSearch(postContent);
         response.setContentType("text/xml;charset=utf-8");
-        response.getWriter().write(postContent);
+        response.getWriter().write(result);
 
         return null;
     }
